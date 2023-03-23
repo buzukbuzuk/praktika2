@@ -1,0 +1,27 @@
+{% extends 'ausys/base.html' %}
+
+{% block content %}
+    <center>
+        <h1>Home</h1>
+        <br/>
+        <h5>ASN List</h5>
+        <br/>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">№</th>
+      <th scope="col">ASN</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data%}
+    <tr>
+      <td>{{ i.id }}</td>
+      <td>{{ i.autosys }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+    </center>
+
+{% endblock %}

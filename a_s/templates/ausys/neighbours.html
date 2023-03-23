@@ -1,0 +1,35 @@
+{% extends 'ausys/base.html' %}
+
+{% block content %}
+    <center>
+        <h5>Neigbours of {{ asn_cur.autosys }}</h5>
+        <br/>
+        <br/>
+        {% for i in neighbours %}
+        {{ i }}
+        {% endfor %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Count of Left</th>
+      <th scope="col">Count of Right</th>
+      <th scope="col">Count of Unique</th>
+      <th scope="col">Count of Uncertain</th>
+      <th scope="col">Time of last inspection</th>
+    </tr>
+  </thead>
+  <tbody>
+{#  {% for i in neighbours%}#}
+    <tr>
+      <td>{{ left }}</td>
+      <td>{{ right }}</td>
+      <td>{{ unique }}</td>
+      <td>{{ uncertain }}</td>
+      <td>{{ time }}</td>
+    </tr>
+{#  {% endfor %}#}
+  </tbody>
+</table>
+    </center>
+
+{% endblock %}

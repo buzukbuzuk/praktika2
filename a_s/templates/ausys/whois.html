@@ -1,0 +1,27 @@
+{% extends 'ausys/base.html' %}
+
+{% block content %}
+    <center>
+        <h1>Whois</h1>
+        <br/>
+        <h5>ASN List</h5>
+        <br/>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form_search.as_p }}
+            <input type="submit" value="Search" class="btn btn-secondary">
+        </form>
+{#    <table class="table">#}
+{#  <thead>#}
+{#    <tr>#}
+{#      <th scope="col">№</th>#}
+{#      <th scope="col">ASN</th>#}
+{#    </tr>#}
+{#  </thead>#}
+{#  <tbody>#}
+{#  </tbody>#}
+{#</table>#}
+    </center>
+
+{% endblock %}

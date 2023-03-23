@@ -1,0 +1,18 @@
+{% extends 'ausys/base.html' %}
+
+{% block content %}
+    <center>
+
+    <h1>Add Autonomous System</h1>
+    <br/><br/>
+    {% if submitted %}
+        Your AS was added
+    {% else %}
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Add" class="btn btn-secondary">
+        </form>
+    {% endif %}
+    </center>
+{% endblock %}
